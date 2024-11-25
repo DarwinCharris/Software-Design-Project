@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style3.css">
+    <title>Modificar Datos</title>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="./index.html">
+            <img src="./img/ligero.png" alt="logo">
+        </a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li class="now"><a href="./Agregar.html">Agregar </a></li>
+                <li><a href="./Modificar.html">Modificar </a></li>
+                <li><a href="./Consultas.html">Consultas</a></li>
+                <li><a href="./Eliminar.html">Eliminar </a></li>
+                <li><a href="./Log.html">Log</a></li>
+                <li><a href="./Configuraciones.html">Config</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1 class="title">Modificar Datos</h1>
+        <form action="#" class="formulario">
+            <div class="contenido">
+                
+                <div class="info1">
+                    <span class="subtitulo">Información Personal</span>
+                    <label for="Tipo de documento:">
+                        <h3 class="data">Tipo de documento:</h3>
+                        <select name="TipoDocumento" id="tipoDocumento" class="seleccion">
+                            <option value="CC">CC</option>
+                            <option value="TI">TI</option>
+                        </select>
+                    </label> 
+                    <label for="NDocumento">
+                        <h3 class="data">Número de documento:</h3>
+                        <input class="campo" type="number">
+                    </label> 
+                    <label for="Primer Nomnre">
+                        <h3 class="data">Primer Nombre:</h3>
+                        <input class="campo" type="text">
+                    </label> 
+                    <label for="Segundo nombre">
+                        <h3 class="data">Segundo Nombre:</h3>
+                        <input class="campo" type="text">
+                    </label> 
+                    <label for="Apellido">
+                        <h3 class="data">Primer Apellido:</h3>
+                        <input class="campo" type="text">
+                    </label>
+                    <label for="Segundo Apellido">
+                        <h3 class="data">Segundo Apellido:</h3>
+                        <input class="campo" type="text">
+                    </label> 
+                </div>
+                <div class="foto">
+                    <img src="./img/usuario.png" alt="">
+                    <label for="imagen">
+                        <input type="file" id="imagen" name="imagen" accept="image/*">
+                    </label>
+                </div>
+            </div>
+            <hr>
+            <div class="contenido">
+
+                <div class="info2">
+                    <span class="subtitulo">Información Adicional</span>
+                    <label for="Fecha de nacimiento">
+                        <h3 class="data">Fecha de nacimiento:</h3>
+                        <input class="campo" type="date">
+                    </label> 
+                    <label for="Genero:">
+                        <h3 class="data">Genero:</h3>
+                        <select name="Genero" id="Genero" class="seleccion">
+                            <option value="M">M</option>
+                            <option value="F">F</option>
+                            <option value="Otro">Otro</option>
+                        </select>
+                    </label> 
+                    <label for="Correo">
+                        <h3 class="data">Correo Electronico:</h3>
+                        <input class="campo" type="email">
+                    </label> 
+                    <label for="Celular">
+                        <h3 class="data">Celular:</h3>
+                        <input class="campo" type="number">
+                    </label> 
+                    <button>
+                        Actualizar
+                        <div class="arrow-wrapper">
+                            <div class="arrow"></div>
+                    
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

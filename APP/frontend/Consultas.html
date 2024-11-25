@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style4.css">
+    <title>Consultas</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="./index.html">
+                <img src="./img/ligero.png" alt="logo">
+            </a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li class="now"><a href="./Agregar.html">Agregar </a></li>
+                <li><a href="./Modificar.html">Modificar </a></li>
+                <li><a href="./Consultas.html">Consultas</a></li>
+                <li><a href="./Eliminar.html">Eliminar </a></li>
+                <li><a href="./Log.html">Log</a></li>
+                <li><a href="./Configuraciones.html">Config</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="apagado" id="apagado">
+            <div class="content">
+                <h1>Servicio apagado</h1>
+                <p>Revisa las configuraciones de los servicios o comunicate con soporte.</p>
+            </div>
+            <div class="imagen">
+                <img src="./img/robot.jpg" alt="robot 404">
+            </div>
+        </div>
+        <div class="encendido" id="encendido">
+            <h1 class="title">Consultas</h1>
+            <div class="menu">
+                <label for="tipo">
+                    <p>Selecciona el tipo de consulta</p>
+                    <select name="tipo" id="tipo" onchange="cambiarVisibilidad()">
+                        <option value="0">--Seleccionar--</option>
+                        <option value="1">Busqueda por id</option>
+                        <option value="2">Busqueda general</option>
+                    </select>
+                </label>
+            </div>
+            <div class="byid">
+                <form action="#" class="doc" id="formulario">
+                    <label for="id">
+                        <h3 class="data">Documento de la persona:</h3>
+                        <input type="number" id="doc">
+                    </label>
+                    <button type="submit"><span>Buscar</span></button>
+                </form>
+
+                <div class="container next2" id="parte2">
+                    <div class="conf">
+                        <div class="contenido">
+                            <div class="info1">
+                                <span class="subtitulo">Información Personal</span>
+                                <label for="Tipo de documento:">
+                                    <h3 class="data">Tipo de documento:</h3>
+                                    <p class="info" id="info_tipo">Documento</p>
+                                </label>
+                                <label for="NDocumento">
+                                    <h3 class="data">Número de documento:</h3>
+                                    <p class="info" id="info_id">Documento</p>
+                                </label>
+                                <label for="Primer Nombre">
+                                    <h3 class="data">Primer Nombre:</h3>
+                                    <p class="info" id="info_name">Documento</p>
+                                </label>
+                                <label for="Segundo nombre">
+                                    <h3 class="data">Segundo Nombre:</h3>
+                                    <p class="info" id="info_segname">Documento</p>
+                                </label>
+                                <label for="Apellidos">
+                                    <h3 class="data">Apellidos:</h3>
+                                    <p class="info" id="info_apellido">Documento</p>
+                                </label>
+                            </div>
+                            <div class="foto">
+                                <img src="./img/usuario.png" alt="" id="usuario2">
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="contenido">
+                            <div class="info2">
+                                <span class="subtitulo">Información Adicional</span>
+                                <label for="Fecha de nacimiento">
+                                    <h3 class="data">Fecha de nacimiento:</h3>
+                                    <p class="info" id="info_fecha">Documento</p>
+
+                                </label>
+                                <label for="Genero:">
+                                    <h3 class="data">Genero:</h3>
+                                    <p class="info" id="info_genero">Documento</p>
+                                </label>
+                                <label for="Correo">
+                                    <h3 class="data">Correo Electronico:</h3>
+                                    <p class="info" id="info_mail">Documento</p>
+                                </label>
+                                <label for="Celular">
+                                    <h3 class="data">Celular:</h3>
+                                    <p class="info" id="info_tel">Documento</p>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+                <div class="all">
+                    <button><span>Buscar</span></button>
+                    <table id="">
+                        <thead>
+                            <tr>
+                                <th>Tipo</th>
+                                <th>Documento</th>
+                                <th>Nombre</th>
+                                <th>Segundo nombre</th>
+                                <th>Apellidos</th>
+                                <th>Fecha de nacimiento</th>
+                                <th>Genero</th>
+                                <th>Correo</th>
+                                <th>Celular</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Los datos se llenarán aquí -->
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+            </div>
+
+        </div>
+        <script src="./scripts/consultas.js"></script>
+</body>
+
+</html>

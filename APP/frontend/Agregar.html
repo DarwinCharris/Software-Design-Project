@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style2.css">
+    <title>Agregar Personas</title>
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <a href="./index.html">
+            <img src="./img/ligero.png" alt="logo">
+        </a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li class="now"><a href="./Agregar.html">Agregar </a></li>
+                <li><a href="./Modificar.html">Modificar </a></li>
+                <li><a href="./Consultas.html">Consultas</a></li>
+                <li><a href="./Eliminar.html">Eliminar </a></li>
+                <li><a href="./Log.html">Log</a></li>
+                <li><a href="./Configuraciones.html">Config</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <div class="container" id="parte1">
+        <h1 class="title">Agregar persona</h1>
+        <form action="#" class="formulario" id="formulario">
+            <div class="contenido">
+                
+                <div class="info1">
+                    <span class="subtitulo">Información Personal</span>
+                    <label for="Tipo de documento:">
+                        <h3 class="data">Tipo de documento:</h3>
+                        <select name="TipoDocumento" id="tipoDocumento" class="seleccion" required>
+                            <option value="1">CC</option>
+                            <option value="2">TI</option>
+                        </select>
+                    </label> 
+                    <label for="NDocumento">
+                        <h3 class="data">Número de documento:</h3>
+                        <input class="campo errores" type="number" id="doc" required>
+                        <label class="error" id="err_id">Error</label>
+                    </label> 
+                    <label for="Primer Nomnre">
+                        <h3 class="data">Primer Nombre:</h3>
+                        <input class="campo errores" type="text" id="nombre" required>
+                        <label class="error" id="err_name">Error</label>
+                    </label> 
+                    <label for="Segundo nombre">
+                        <h3 class="data">Segundo Nombre:</h3>
+                        <input class="campo errores" type="text" id="segnombre" required>
+                        <label class="error" id="err_segname">Error</label>
+                    </label> 
+                    <label for="Apellidos">
+                        <h3 class="data">Apellidos:</h3>
+                        <input class="campo errores" type="text" id="apellidos" required>
+                        <label class="error" id="err_apellido">Error</label>
+                    </label>
+                </div>
+                <div class="foto">
+                    <label class="error" id="err_foto">Error</label>
+                    <img src="./img/usuario.png" alt="" id="usuario">
+                    <div class="subir">
+                        <label for="imagen" class="btn_img">
+                        <input type="file" id="imagen" name="imagen" accept="image/*">
+                        Subir Archivo
+                    </label></div>
+                    
+                </div>
+            </div>
+            <hr>
+            <div class="contenido">
+                <div class="info2">
+                    <span class="subtitulo">Información Adicional</span>
+                    <label for="Fecha de nacimiento">
+                        <h3 class="data">Fecha de nacimiento:</h3>
+                        <input class="campo" type="date" id="fecha" required>
+                    </label> 
+                    <label for="Genero:">
+                        <h3 class="data">Genero:</h3>
+                        <select name="Genero" id="Genero" class="seleccion" required>
+                            <option value="M">Masculino</option>
+                            <option value="F">Femenino</option>
+                            <option value="NB">No binario</option>
+                            <option value="NA">Prefiero no decirlo</option>
+                        </select>
+                    </label> 
+                    <label for="Correo">
+                        <h3 class="data">Correo Electronico:</h3>
+                        <input class="campo errores" type="email" id="mail" required>
+                        <label class="error" id="err_mail">Error</label>
+                    </label> 
+                    <label for="Celular">
+                        <h3 class="data">Celular:</h3>
+                        <input class="campo errores" type="number" id="tel" required>
+                        <label class="error" id="err_tel">Error</label>
+                    </label> 
+                    <button id="confirmar" type="submit">
+                        Confirmar
+                        <div class="arrow-wrapper">
+                            <div class="arrow"></div>
+                    
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="container next2" id="parte2">
+        <h1 class="title">Confirmar Información</h1>
+        <div class="conf">
+            <div class="contenido">
+                <div class="info1">
+                    <span class="subtitulo">Información Personal</span>
+                    <label for="Tipo de documento:">
+                        <h3 class="data">Tipo de documento:</h3>
+                        <p class="info" id="info_tipo">Documento</p>
+                    </label> 
+                    <label for="NDocumento">
+                        <h3 class="data">Número de documento:</h3>
+                        <p class="info" id="info_id">Documento</p>
+                    </label> 
+                    <label for="Primer Nombre">
+                        <h3 class="data">Primer Nombre:</h3>
+                        <p class="info" id="info_name">Documento</p>
+                    </label> 
+                    <label for="Segundo nombre">
+                        <h3 class="data">Segundo Nombre:</h3>
+                        <p class="info" id="info_segname">Documento</p>
+                    </label> 
+                    <label for="Apellidos">
+                        <h3 class="data">Apellidos:</h3>
+                        <p class="info" id="info_apellido">Documento</p>
+                    </label>
+                </div>
+                <div class="foto">
+                    <img src="./img/usuario.png" alt="" id="usuario2">
+                </div>
+            </div>
+            <hr>
+            <div class="contenido">
+
+                <div class="info2">
+                    <span class="subtitulo">Información Adicional</span>
+                    <label for="Fecha de nacimiento">
+                        <h3 class="data">Fecha de nacimiento:</h3>
+                        <p class="info" id="info_fecha">Documento</p>
+                        
+                    </label> 
+                    <label for="Genero:">
+                        <h3 class="data">Genero:</h3>
+                        <p class="info" id="info_genero">Documento</p>
+                    </label> 
+                    <label for="Correo">
+                        <h3 class="data">Correo Electronico:</h3>
+                        <p class="info" id="info_mail">Documento</p>
+                    </label> 
+                    <label for="Celular">
+                        <h3 class="data">Celular:</h3>
+                        <p class="info" id="info_tel">Documento</p>
+                    </label> 
+                    <div class="btns">
+                        <button id="atras" class="atras">
+                            
+                            <div class="arrow-wrapper" >
+                                <div class="arrow arrow2"id="back"></div>
+                        
+                            </div>
+                            Atras
+                        </button>
+                        <button id="enviar">
+                            Confirmar
+                            <div class="arrow-wrapper">
+                                <div class="arrow"></div>
+                        
+                            </div>
+                        </button>
+                    </div>
+                    
+                </div>
+                <div class="loadiv" id="load">
+                    <div class="recuadro">
+                        <div class="loader"></div>
+                    </div>
+                </div>
+                
+                <div class="topo" id="topo"><p id="topo_parrafo"></p></div>
+            </div>
+        </div>
+    </div>
+    <script src="./scripts/agregar.js"></script>
+</body>
+</html>

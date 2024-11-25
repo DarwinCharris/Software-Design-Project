@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  create:
+    build: ./Services/create
+    ports:
+      - 3002:3002
+  
+  read:
+    build: ./Services/read
+    ports:
+      - 3003:3003
+    networks:
+      - app-network
+  
+  update:
+    build: ./Services/update
+    ports:
+      - 3004:3004
+  
+  delete:
+    build: ./Services/delete
+    ports:
+      - 3005:3005
+
+  configurations:
+    build: ./Services/configurations
+    ports:
+      - 3006:3006
+    networks:
+      - app-network
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      - DOCKER_HOST=unix:///var/run/docker.sock
+
+  log:
+    build: ./Services/log
+    ports:
+      - 3007:3007
+
+  front:
+    build: ./frontend
+    ports:
+      - 3000:80
+
+networks:
+  app-network:

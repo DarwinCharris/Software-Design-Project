@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    outline: none; border: none;
+    text-decoration: none;
+    transition: .2s linear;
+    
+}
+
+body{
+    background: #f0f5f9;
+}
+footer {
+    display: none;
+    background: transparent;
+}
+
+.header{
+    background-color: #725AC1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    padding-left: 0%;
+    
+}
+.header .logo{
+    cursor: pointer;
+}
+.header .logo img{
+    padding-left: 20px;
+    height: 40px;
+    width: auto;
+    transition: all 0.3s;
+}
+.header .logo img:hover{
+    transform: scale(1.2);
+}
+.header .nav-links{
+    list-style: none;
+    padding-right: 20px;
+}
+.header .nav-links li{
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.header .nav-links li:hover{
+    transform: scale(1.1);
+}
+
+.header .nav-links a{
+    font-size: 700;
+    color: #eceff1;
+    text-decoration: none;
+
+}
+
+.header .nav-links a:hover{
+    color: #000000;
+}
+/* From Uiverse.io by namecho */ 
+.switch {
+    --button-width: 3.5em;
+    --button-height: 2em;
+    --toggle-diameter: 1.5em;
+    --button-toggle-offset: calc((var(--button-height) - var(--toggle-diameter)) / 2);
+    --toggle-shadow-offset: 10px;
+    --toggle-wider: 3em;
+    --color-grey: #cccccc;
+    --color-green: #725AC1;
+   }
+   
+   .slider {
+    display: inline-block;
+    width: var(--button-width);
+    height: var(--button-height);
+    background-color: var(--color-grey);
+    border-radius: calc(var(--button-height) / 2);
+    position: relative;
+    transition: 0.3s all ease-in-out;
+   }
+   
+   .slider::after {
+    content: "";
+    display: inline-block;
+    width: var(--toggle-diameter);
+    height: var(--toggle-diameter);
+    background-color: #fff;
+    border-radius: calc(var(--toggle-diameter) / 2);
+    position: absolute;
+    top: var(--button-toggle-offset);
+    transform: translateX(var(--button-toggle-offset));
+    box-shadow: var(--toggle-shadow-offset) 0 calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
+    transition: 0.3s all ease-in-out;
+   }
+   
+   .switch input[type="checkbox"]:checked + .slider {
+    background-color: var(--color-green);
+   }
+   
+   .switch input[type="checkbox"]:checked + .slider::after {
+    transform: translateX(calc(var(--button-width) - var(--toggle-diameter) - var(--button-toggle-offset)));
+    box-shadow: calc(var(--toggle-shadow-offset) * -1) 0 calc(var(--toggle-shadow-offset) * 4) rgba(0, 0, 0, 0.1);
+   }
+   
+   .switch input[type="checkbox"] {
+    display: none;
+   }
+   
+   .switch input[type="checkbox"]:active + .slider::after {
+    width: var(--toggle-wider);
+   }
+   
+   .switch input[type="checkbox"]:checked:active + .slider::after {
+    transform: translateX(calc(var(--button-width) - var(--toggle-wider) - var(--button-toggle-offset)));
+   }
+   /* From Uiverse.io by CYBWEBALI */ 
+.btn {
+    display: grid;
+    place-items: center;
+    background: #e3edf7;
+    height: 20px;
+    padding: 1.4em;
+    border-radius: 10px;
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15),
+            -6px -6px 10px -1px rgba(255,255,255,0.7);
+    border: 1px solid rgba(0,0,0,0);
+    cursor: pointer;
+    transition: transform 0.5s;
+  }
+  
+  .btn:hover {
+    box-shadow: inset 4px 4px 6px -1px rgba(0,0,0,0.2),
+            inset -4px -4px 6px -1px rgba(255,255,255,0.7),
+            -0.5px -0.5px 0px rgba(255,255,255,1),
+            0.5px 0.5px 0px rgba(0,0,0,0.15),
+            0px 12px 10px -10px rgba(0,0,0,0.05);
+    border: 1px solid rgba(0,0,0,0.1);
+    transform: translateY(0.5em);
+  }
+  
+  .btn svg {
+    width: 100%; 
+    height: auto; 
+    transition: transform 0.5s;
+  }
+  
+  .btn:hover svg {
+    transform: scale(0.9);
+    fill: #000000;
+  }
+  .container .contenido{
+    display: flexbox;
+    padding: 5px 3%;
+  }
+  .container .contenido .card{
+    background-color: #ffff;
+    
+    padding: 10px;
+    margin: 0px 50px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.35);
+  }
+  .container .titulo_p{
+    font-size: 50px;
+    padding-left: 20px;
+
+  }
+  .container .contenido .card img{
+    max-height: 200px;
+    width: 100%;
+    border-radius: 20px;
+  }
+  .container .contenido .card .info{
+    display: flex;
+  }
+  .container .contenido .card .info .left{
+    width: 25%;
+  }
+  .container .contenido .card .info .right{
+    width: 75%;
+    padding: 15px;
+    font-size: 15px;
+  }
+  .container .contenido .card{
+    position: relative;
+    height: 280px;
+  }
+  .container .contenido .card label{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding-right: 5%;
+    padding-bottom: 10px;
+
+  }
+  .container .contenido .card .titulo{
+    font-size: 25px;
+  }
+  .botones{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding-right: 5%;
+    padding-bottom: 15px;
+  }
+  

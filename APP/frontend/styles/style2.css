@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: .2s linear;
+
+}
+
+body {
+    background: #f7fbfd;
+}
+
+footer {
+    display: none;
+    background: transparent;
+}
+
+.header {
+    background-color: #725AC1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 55px;
+    padding-left: 0%;
+
+}
+
+.header .logo {
+    cursor: pointer;
+}
+
+.header .logo img {
+    padding-left: 20px;
+    height: 40px;
+    width: auto;
+    transition: all 0.3s;
+}
+
+.header .logo img:hover {
+    transform: scale(1.2);
+}
+
+.header .nav-links {
+    list-style: none;
+    padding-right: 20px;
+}
+
+.header .nav-links li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.header .nav-links li:hover {
+    transform: scale(1.1);
+}
+
+.header .nav-links a {
+    font-size: 700;
+    color: #eceff1;
+    text-decoration: none;
+
+}
+
+.header .nav-links a:hover {
+    color: #000000;
+}
+
+/*Estilos pág principal*/
+.container {
+    margin: 20px 15% 20px 15%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 15px;
+}
+
+.container .title {
+    padding: 20px 20px;
+    font-size: 30px;
+    color: #414141;
+}
+
+hr {
+    border: 1px solid #777;
+    width: 99%;
+}
+
+.container .formulario {
+    padding-left: 5%;
+    padding-right: 5%;
+
+}
+
+.container .contenido {
+    display: flex;
+}
+
+.container .contenido .info1 {
+    width: 50%;
+}
+
+.container .contenido .foto {
+    align-content: center;
+    text-align: center;
+    width: 50%;
+
+}
+
+.container .contenido .foto img {
+    width: 200px;
+    border-radius: 50%;
+}
+
+.container .contenido .info2 {
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.subtitulo {
+    font-size: 35px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    padding-bottom: 20px;
+}
+
+label {
+    display: flex;
+    padding-bottom: 10px;
+
+}
+
+.data {
+    font-size: 15px;
+    font-weight: normal;
+}
+
+.campo {
+    background-color: #e2e2e2da;
+    border-radius: 10px;
+    margin-left: 5px;
+    padding-left: 5px;
+}
+
+.seleccion {
+    margin-left: 5px;
+    background-color: #e2e2e2da;
+    border-radius: 15px;
+}
+
+/* From Uiverse.io by satyamchaudharydev */
+button {
+    --primary-color: #725AC1;
+    --secondary-color: #fff;
+    --hover-color: #111;
+    --arrow-width: 10px;
+    --arrow-stroke: 2px;
+    box-sizing: border-box;
+    border: 0;
+    border-radius: 20px;
+    color: var(--secondary-color);
+    padding: 1em 1.8em;
+    background: var(--primary-color);
+    display: flex;
+    transition: 0.2s background;
+    align-items: center;
+    gap: 0.6em;
+    font-weight: bold;
+
+}
+
+button .arrow-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button .arrow {
+    margin-top: 1px;
+    width: var(--arrow-width);
+    background: var(--primary-color);
+    height: var(--arrow-stroke);
+    position: relative;
+    transition: 0.2s;
+}
+
+button .arrow::before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    border: solid var(--secondary-color);
+    border-width: 0 var(--arrow-stroke) var(--arrow-stroke) 0;
+    display: inline-block;
+    top: -3px;
+    right: 3px;
+    transition: 0.2s;
+    padding: 3px;
+    transform: rotate(-45deg);
+}
+
+button:hover {
+    background-color: var(--hover-color);
+}
+
+button:hover .arrow {
+    background: var(--secondary-color);
+}
+
+button:hover .arrow:before {
+    right: 0;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.foto .btn_img {
+    display: inline-block;
+    text-transform: uppercase;
+    color: #fff;
+    background: #725AC1;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 12px;
+    user-select: none;
+    cursor: pointer;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.35);
+    border-radius: 3px;
+    margin-bottom: 10px;
+}
+
+.error {
+    color: red;
+    font-size: 15px;
+    padding-left: 5px;
+    padding-bottom: 0px;
+    display: none;
+}
+
+.foto .error {
+    justify-content: center;
+    align-items: center;
+}
+
+.next2 .contenido .info2 {
+    width: 50%;
+    padding-bottom: 20px;
+}
+
+.next2 .contenido .topo {
+    width: 50%;
+    align-content: center;
+    text-align: center;
+}
+
+.btns {
+    display: flex;
+}
+
+.btns .atras {
+    margin-right: 5px;
+}
+
+.next2 .data {
+    font-weight: bold;
+}
+
+button .arrow2 {
+    margin-top: 1px;
+    width: var(--arrow-width);
+    background: var(--primary-color);
+    height: var(--arrow-stroke);
+    position: relative;
+    transition: 0.2s;
+    transform: rotate(-180deg);
+}
+
+.info {
+    padding-left: 3px;
+}
+
+.conf {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+#topo_parrafo {
+    max-height: 190px;
+    width: 90%;
+    overflow-y: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background-color: #e2e2e2da;
+    font-size: 15px;
+    border-radius: 20px;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.35);
+    align-content: center;
+    text-align: center;
+    margin-left: 5%;
+
+}
+
+#topo_parrafo::-webkit-scrollbar {
+    width: 15px;
+
+}
+
+.container .contenido .topo {
+    width: 50%;
+    align-content: center;
+    text-align: center;
+}
+
+.container .contenido .loadiv {
+    width: 50%;
+    background-color: transparent;
+    padding: 3% 1%;
+}
+
+.container .contenido .recuadro {
+    width: 100%;
+    height: 100%;
+    align-content: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.loader {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 3px solid black;
+    border-top-color: transparent;
+    animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
