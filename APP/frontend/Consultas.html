@@ -53,6 +53,7 @@
                     <label for="id">
                         <h3 class="data">Documento de la persona:</h3>
                         <input type="number" id="doc">
+                        <label class="error" id="error">Error</label>
                     </label>
                     <button type="submit"><span>Buscar</span></button>
                 </form>
@@ -112,48 +113,32 @@
                         </div>
                     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
                 </div>
-                <div class="all">
-                    <button><span>Buscar</span></button>
-                    <table id="">
-                        <thead>
-                            <tr>
-                                <th>Tipo</th>
-                                <th>Documento</th>
-                                <th>Nombre</th>
-                                <th>Segundo nombre</th>
-                                <th>Apellidos</th>
-                                <th>Fecha de nacimiento</th>
-                                <th>Genero</th>
-                                <th>Correo</th>
-                                <th>Celular</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <!-- Los datos se llenarán aquí -->
-                        </tbody>
-                    </table>
+                <div class="notf" id="notf">
+                    <h3>Persona no encontrada</h3>
+                    <p>El usuario no existe en la base de datos</p>
                 </div>
-
-
-
+            </div>
+            <div class="all">
+                <button><span>Buscar</span></button>
+                <table id="">
+                    <thead>
+                        <tr>
+                            <th>Tipo</th>
+                            <th>Documento</th>
+                            <th>Nombre</th>
+                            <th>Segundo nombre</th>
+                            <th>Apellidos</th>
+                            <th>Fecha de nacimiento</th>
+                            <th>Genero</th>
+                            <th>Correo</th>
+                            <th>Celular</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Los datos se llenarán aquí -->
+                    </tbody>
+                </table>
             </div>
 
         </div>

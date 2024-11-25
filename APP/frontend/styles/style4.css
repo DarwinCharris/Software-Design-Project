@@ -243,6 +243,7 @@ input {
 
 .info {
   padding-left: 3px;
+  font-size: 18px;
 }
 
 .conf {
@@ -283,10 +284,26 @@ input {
 }
 
 .data {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: normal;
 }
 
 .next2{
   margin-top: 20px;
+}
+.byid .error{
+  padding-left: 10px;
+  color: red;
+  font-size: 15px;
+}
+.notf{
+  align-content: center;
+  text-align: center;
+  height: 200px;
+}
+.notf h3{
+  font-size: 60px;
+}
+input{
+  padding-left: 10px;
 }

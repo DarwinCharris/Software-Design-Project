@@ -9,6 +9,7 @@ COPY ./file.py /app/file.py
 
 # Instalar las dependencias necesarias
 RUN pip install flask requests
+RUN pip install flask-cors
 
 # Comando para ejecutar el archivo de Python
 CMD ["python", "./file.py"]
