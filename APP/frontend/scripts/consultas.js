@@ -48,6 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 document.getElementById('formulario').addEventListener('submit', function (event) {
+  event.preventDefault();
   //Mandar el valor 
   const id = document.getElementById('doc').value;
   fetch(`http://127.0.0.1:3003/findbyid/${id}`, {
