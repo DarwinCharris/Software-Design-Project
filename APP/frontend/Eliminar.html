@@ -1,11 +1,126 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style6.css">
+    <title>Eliminar</title>
 </head>
+
 <body>
-    
+    <div class="alert-overlay" id="customAlert">
+        <div class="alert-box">
+          <p id="alertMessage">Este es un mensaje personalizado.</p>
+          <button class="alert-button" onclick="closeAlert()">Cerrar</button>
+          <button class="alert-button" id="delete">Confirmar</button>
+        </div>
+      </div>
+
+    <header class="header">
+        <div class="logo">
+            <a href="./index.html">
+                <img src="./img/ligero.png" alt="logo">
+            </a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li class="now"><a href="./Agregar.html">Agregar </a></li>
+                <li><a href="./Modificar.html">Modificar </a></li>
+                <li><a href="./Consultas.html">Consultas</a></li>
+                <li><a href="./Eliminar.html">Eliminar </a></li>
+                <li><a href="./Log.html">Log</a></li>
+                <li><a href="./Configuraciones.html">Config</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1 class="titulo_p">Eliminar</h1>
+        <div class="contenido">
+            <form action="#" class="formulario" id="formulario">
+                <h3 class="sub">Documento:</h3>
+                <label for="Tipo de documento:" class="formu">
+                    <input type="number" required id="id">
+                    <button class="btn" type="submit">Consultar</button>
+                    <label id="error"></label>
+                </label>
+                
+            </form>
+        </div>
+        <div class="notf" id="notf">
+            <h3>ERROR</h3>
+            <p>La persona no existe en la base de datos</p>
+        </div>
+        <div class="container next3" id="parte2">
+            <div class="conf">
+                <div class="contenido">
+                    <div class="info1">
+                        <span class="subtitulo">Información Personal</span>
+                        <label for="Tipo de documento:">
+                            <h3 class="data">Tipo de documento:</h3>
+                            <p class="info" id="info_tipo">Documento</p>
+                        </label>
+                        <label for="NDocumento">
+                            <h3 class="data">Número de documento:</h3>
+                            <p class="info" id="info_id">Documento</p>
+                        </label>
+                        <label for="Primer Nombre">
+                            <h3 class="data">Primer Nombre:</h3>
+                            <p class="info" id="info_name">Documento</p>
+                        </label>
+                        <label for="Segundo nombre">
+                            <h3 class="data">Segundo Nombre:</h3>
+                            <p class="info" id="info_segname">Documento</p>
+                        </label>
+                        <label for="Apellidos">
+                            <h3 class="data">Apellidos:</h3>
+                            <p class="info" id="info_apellido">Documento</p>
+                        </label>
+                    </div>
+                    <div class="foto">
+                        <img src="./img/usuario.png" alt="" id="usuario2">
+                    </div>
+                </div>
+                <hr>
+                <div class="contenido">
+                    <div class="info2">
+                        <span class="subtitulo">Información Adicional</span>
+                        <label for="Fecha de nacimiento">
+                            <h3 class="data">Fecha de nacimiento:</h3>
+                            <p class="info" id="info_fecha">Documento</p>
+
+                        </label>
+                        <label for="Genero:">
+                            <h3 class="data">Genero:</h3>
+                            <p class="info" id="info_genero">Documento</p>
+                        </label>
+                        <label for="Correo">
+                            <h3 class="data">Correo Electronico:</h3>
+                            <p class="info" id="info_mail">Documento</p>
+                        </label>
+                        <label for="Celular">
+                            <h3 class="data">Celular:</h3>
+                            <p class="info" id="info_tel">Documento</p>
+                        </label>
+                        <label for="">
+                            <div class="botones">
+                            <button class="btn" type="submit" id="back">Cancelar</button>
+                            <button class="btn" id="elm" type="submit">ELIMINAR</button>
+                        </div>
+                        </label>
+                        
+                    </div>
+                    
+                </div>
+                
+            </div>
+
+        </div>
+    </div>
+    <div class="container" id="Perifl">
+
+    </div>
+    <script src="./scripts/eliminar.js"></script>
 </body>
+
 </html>

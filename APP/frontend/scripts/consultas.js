@@ -272,15 +272,18 @@ function llenarPersona(id, firstname, secondname, lastsnames, birthdate, gender,
   document.getElementById("usuario2_all").src = imageUrl
   document.getElementById("info_tipo_all").textContent = typeid
   // Mostrar el pop up 
-  document.getElementById("principal").style.display = 'none';
-  document.getElementById("popup").style.display = '';
+  showAlert("");
 }
 
-document.getElementById("cerrar").addEventListener("click", ()=>{
-  document.getElementById("principal").style.display = '';
-  document.getElementById("popup").style.display = 'none';
-});
 
+function showAlert() {
+  document.getElementById('customAlert').style.display = 'flex';
+}
+
+// Función para cerrar el alert
+function closeAlert() {
+  document.getElementById('customAlert').style.display = 'none';
+}
 
 
 

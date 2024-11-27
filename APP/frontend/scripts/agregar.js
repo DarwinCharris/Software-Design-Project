@@ -204,6 +204,7 @@ document.getElementById('atras').onclick = function () {
     document.getElementById("usuario").src = data["foto"]
 };
 document.getElementById('enviar').onclick = function () {
+    alert("Hola")
     fetch('http://127.0.0.1:3002/insert/', {
         method: 'POST',
         headers: {
@@ -215,7 +216,8 @@ document.getElementById('enviar').onclick = function () {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             } else {
-                alert("Datos enviados")
+                alert(data["id"], data["tipo"], "CREATE")
+                addlog(data["id"], data["tipo"], "CREATE");
                 window.location.reload();
             }
         })
@@ -224,3 +226,24 @@ document.getElementById('enviar').onclick = function () {
         });
 
 }
+function addlog(doc, type, action){
+    fetch(`http://127.0.0.1:3007/write/${doc}/${type}/${action}/`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`Error ${response.status}: ${response.statusText}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        alert("Enviado al log")
+      })
+      .catch(error => {
+        console.error('Error:', error);
+        alert('Error al realizar la solicitud en log');
+      });
+  }

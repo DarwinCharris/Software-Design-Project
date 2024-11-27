@@ -391,7 +391,6 @@ input {
 .btn {
   position: relative;
   font-size: 17px;
-  text-transform: uppercase;
   text-decoration: none;
   padding: 1em 2.5em;
   display: flex;
@@ -439,7 +438,6 @@ input {
 .next3 .data{
   font-weight: bold;
 }
-
 .tabla {
   margin-top: 10px;
   margin-bottom: 20px;
@@ -468,4 +466,58 @@ table td {
 
 table, th, td {
   border: 1px solid black; /* Bordes de la tabla */
+}
+
+.alert-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none; /* Oculto por defecto */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Estilo del contenedor del alert */
+.alert-box {
+  display: flex;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  height: 80%;
+  width: 80%;
+  border-top: 40px;
+}
+.alert-box .next3{
+  overflow: auto;
+  width: 100%;
+  padding-top: 20px;
+}
+.alert-box label{
+  display: flex;
+}
+.alert-box .subtitulo{
+  display: flex;
+  padding-bottom: 0;
+}
+
+/* Botón de cerrar */
+.alert-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background: #007BFF;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.alert-button:hover {
+  background: #0056b3;
 }

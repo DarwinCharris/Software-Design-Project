@@ -9,6 +9,68 @@
 </head>
 
 <body>
+    <div class="alert-overlay" id="customAlert">
+        <div class="alert-box">
+            <div class="container next3" id="parte2pop">
+                <div class="conf">
+                    <div class="contenido">
+                        <div class="info1">
+                            <span class="subtitulo">Información Personal</span>
+                            <label for="Tipo de documento:">
+                                <h3 class="data">Tipo de documento:</h3>
+                                <p class="info" id="info_tipo_all">Documento</p>
+                            </label>
+                            <label for="NDocumento">
+                                <h3 class="data">Número de documento:</h3>
+                                <p class="info" id="info_id_all">Documento</p>
+                            </label>
+                            <label for="Primer Nombre">
+                                <h3 class="data">Primer Nombre:</h3>
+                                <p class="info" id="info_name_all">Documento</p>
+                            </label>
+                            <label for="Segundo nombre">
+                                <h3 class="data">Segundo Nombre:</h3>
+                                <p class="info" id="info_segname_all">Documento</p>
+                            </label>
+                            <label for="Apellidos">
+                                <h3 class="data">Apellidos:</h3>
+                                <p class="info" id="info_apellido_all">Documento</p>
+                            </label>
+                        </div>
+                        <div class="foto">
+                            <img src="./img/usuario.png" alt="" id="usuario2_all">
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="contenido">
+                        <div class="info2">
+                            <span class="subtitulo">Información Adicional</span>
+                            <label for="Fecha de nacimiento">
+                                <h3 class="data">Fecha de nacimiento:</h3>
+                                <p class="info" id="info_fecha_all">Documento</p>
+    
+                            </label>
+                            <label for="Genero:">
+                                <h3 class="data">Genero:</h3>
+                                <p class="info" id="info_genero_all">Documento</p>
+                            </label>
+                            <label for="Correo">
+                                <h3 class="data">Correo Electronico:</h3>
+                                <p class="info" id="info_mail_all">Documento</p>
+                            </label>
+                            <label for="Celular">
+                                <h3 class="data">Celular:</h3>
+                                <p class="info" id="info_tel_all">Documento</p>
+                            </label>
+                        </div>
+                    </div>
+                    <button class="btn" onclick="closeAlert()">Cerrar</button>
+                </div>
+          
+            </div>
+          
+        </div>
+      </div>
     <header class="header">
         <div class="logo">
             <a href="./index.html">
@@ -164,64 +226,9 @@
 
     </div>
     <div class="contenedor" id="popup">
-        <div class="overlay"></div>
-        <div class="container next2" id="parte2">
-            <div class="conf">
-                <div class="contenido">
-                    <div class="info1">
-                        <span class="subtitulo">Información Personal</span>
-                        <label for="Tipo de documento:">
-                            <h3 class="data">Tipo de documento:</h3>
-                            <p class="info" id="info_tipo_all">Documento</p>
-                        </label>
-                        <label for="NDocumento">
-                            <h3 class="data">Número de documento:</h3>
-                            <p class="info" id="info_id_all">Documento</p>
-                        </label>
-                        <label for="Primer Nombre">
-                            <h3 class="data">Primer Nombre:</h3>
-                            <p class="info" id="info_name_all">Documento</p>
-                        </label>
-                        <label for="Segundo nombre">
-                            <h3 class="data">Segundo Nombre:</h3>
-                            <p class="info" id="info_segname_all">Documento</p>
-                        </label>
-                        <label for="Apellidos">
-                            <h3 class="data">Apellidos:</h3>
-                            <p class="info" id="info_apellido_all">Documento</p>
-                        </label>
-                    </div>
-                    <div class="foto">
-                        <img src="./img/usuario.png" alt="" id="usuario2_all">
-                    </div>
-                </div>
-                <hr>
-                <div class="contenido">
-                    <div class="info2">
-                        <span class="subtitulo">Información Adicional</span>
-                        <label for="Fecha de nacimiento">
-                            <h3 class="data">Fecha de nacimiento:</h3>
-                            <p class="info" id="info_fecha_all">Documento</p>
 
-                        </label>
-                        <label for="Genero:">
-                            <h3 class="data">Genero:</h3>
-                            <p class="info" id="info_genero_all">Documento</p>
-                        </label>
-                        <label for="Correo">
-                            <h3 class="data">Correo Electronico:</h3>
-                            <p class="info" id="info_mail_all">Documento</p>
-                        </label>
-                        <label for="Celular">
-                            <h3 class="data">Celular:</h3>
-                            <p class="info" id="info_tel_all">Documento</p>
-                        </label>
-                    </div>
-                </div>
-                <button class="btn" id="cerrar">Cerrar</button>
-            </div>
 
-        </div>
+
     </div>
 
     <script src="./scripts/consultas.js"></script>
