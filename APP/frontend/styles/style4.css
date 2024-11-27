@@ -93,7 +93,8 @@ footer {
 
 table {
   margin: auto;
-  border-collapse: collapse;
+  text-align: left;
+  width: 100%;
 }
 
 .menu {
@@ -190,7 +191,7 @@ input {
 }
 
 .all {
-  display: none;
+  display: flex;
   margin-top: 20px;
   margin-left: 20px;
 }
@@ -288,22 +289,183 @@ input {
   font-weight: normal;
 }
 
-.next2{
+.next2 {
   margin-top: 20px;
 }
-.byid .error{
+
+.byid .error {
   padding-left: 10px;
   color: red;
   font-size: 15px;
 }
-.notf{
+
+.notf {
   align-content: center;
   text-align: center;
   height: 200px;
 }
-.notf h3{
+
+.notf h3 {
   font-size: 60px;
 }
-input{
+
+input {
   padding-left: 10px;
+}
+
+.all .custom-select {
+  margin-top: 10px;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+}
+
+.select-dropdown {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  width: 180px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.select-dropdown input {
+  margin-right: 10px;
+}
+
+.select-dropdown label {
+  display: block;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.select-dropdown label:hover {
+  background-color: #ddd;
+}
+
+.select-trigger {
+  display: block;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.select-trigger:focus {
+  outline: none;
+}
+
+.select-trigger {
+  text-align: center;
+}
+
+.next2 label{
+  display: flex;
+}
+.next2{
+  padding: 10% 10%;
+  border-radius: 10%;
+  width: 60%;
+  
+}
+.contenedor {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+.next2 {
+  position: relative;
+  z-index: 1; /* Asegura que el contenido principal esté por encima de la superposición */
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px; /* Puedes ajustar el borde si es necesario */
+}
+
+/* From Uiverse.io by cssbuttons-io */ 
+.btn {
+  position: relative;
+  font-size: 17px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1em 2.5em;
+  display: flex;
+  cursor: pointer;
+  border-radius: 6em;
+  transition: all 0.2s;
+  border: none;
+  font-family: inherit;
+  font-weight: 500;
+  color: black;
+  background-color: #725AC1;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn::after {
+  background-color: #fff;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+.next3 .data{
+  font-weight: bold;
+}
+
+.tabla {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 100%; /* Ajusta al ancho del contenedor */
+  overflow-x: auto; /* Habilita el scroll horizontal */
+  border-radius: 15px;
+}
+
+table {
+  
+  width: 100%; /* Ajusta la tabla al 100% del contenedor */
+  border-collapse: collapse; /* Elimina el espacio entre bordes */
+}
+
+table th {
+  background-color: #725AC1; /* Color de fondo del encabezado */
+  color: white; /* Color de texto del encabezado */
+  padding: 10px; /* Espaciado interno */
+  text-align: center; /* Alineación del texto */
+}
+
+table td {
+  padding: 8px; /* Espaciado interno */
+  text-align: left; /* Alineación del texto */
+}
+
+table, th, td {
+  border: 1px solid black; /* Bordes de la tabla */
 }

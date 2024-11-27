@@ -26,7 +26,7 @@
             </ul>
         </nav>
     </header>
-    <div class="container">
+    <div class="container" id="principal">
         <div class="apagado" id="apagado">
             <div class="content">
                 <h1>Servicio apagado</h1>
@@ -58,7 +58,7 @@
                     <button type="submit"><span>Buscar</span></button>
                 </form>
 
-                <div class="container next2" id="parte2">
+                <div class="container next3" id="parte2">
                     <div class="conf">
                         <div class="contenido">
                             <div class="info1">
@@ -120,29 +120,111 @@
                 </div>
             </div>
             <div class="all">
-                <button><span>Buscar</span></button>
-                <table id="">
-                    <thead>
-                        <tr>
-                            <th>Tipo</th>
-                            <th>Documento</th>
-                            <th>Nombre</th>
-                            <th>Segundo nombre</th>
-                            <th>Apellidos</th>
-                            <th>Fecha de nacimiento</th>
-                            <th>Genero</th>
-                            <th>Correo</th>
-                            <th>Celular</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <!-- Los datos se llenarán aquí -->
-                    </tbody>
-                </table>
+                <button id="findall"><span>Buscar</span></button>
+                <div class="custom-select">
+                    <div class="select-trigger" tabindex="0"><img src="./img/filter-svgrepo-com.svg" width="24px"
+                            height="24px" alt="Filtro" /></div>
+                    <div class="select-dropdown">
+                        <label><input id="tipo_c" type="checkbox" value="opcion1">Tipo</label>
+                        <label><input id="documento_c" type="checkbox" value="opcion2">Documento</label>
+                        <label><input id="name_c" type="checkbox" value="opcion3">Nombre</label>
+                        <label><input id="segname_c" type="checkbox" value="opcion4">Seg Nombre</label>
+                        <label><input id="apellidos_c" type="checkbox" value="opcion5">Apellidos</label>
+                        <label><input type="checkbox" value="opcion6">F. nacimiento</label>
+                        <label><input id="genero_c" type="checkbox" value="opcion7">Genero</label>
+                        <label><input id="mail_c" type="checkbox" value="opcion8">Email</label>
+                        <label><input id="telefono_c" type="checkbox" value="opcion9">Teléfono</label>
+                    </div>
+                </div>
+                <div class="tabla">
+                    <table id="data-table">
+                        <thead>
+                            <tr>
+                                <th>Tipo</th>
+                                <th>Documento</th>
+                                <th>Nombre</th>
+                                <th>Segundo Nombre</th>
+                                <th>Apellidos</th>
+                                <th>Fecha de nacimiento</th>
+                                <th>Género</th>
+                                <th>Email</th>
+                                <th>Teléfono</th>
+                                <th>Perfil</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Las filas se llenarán aquí dinámicamente -->
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+    <div class="contenedor" id="popup">
+        <div class="overlay"></div>
+        <div class="container next2" id="parte2">
+            <div class="conf">
+                <div class="contenido">
+                    <div class="info1">
+                        <span class="subtitulo">Información Personal</span>
+                        <label for="Tipo de documento:">
+                            <h3 class="data">Tipo de documento:</h3>
+                            <p class="info" id="info_tipo_all">Documento</p>
+                        </label>
+                        <label for="NDocumento">
+                            <h3 class="data">Número de documento:</h3>
+                            <p class="info" id="info_id_all">Documento</p>
+                        </label>
+                        <label for="Primer Nombre">
+                            <h3 class="data">Primer Nombre:</h3>
+                            <p class="info" id="info_name_all">Documento</p>
+                        </label>
+                        <label for="Segundo nombre">
+                            <h3 class="data">Segundo Nombre:</h3>
+                            <p class="info" id="info_segname_all">Documento</p>
+                        </label>
+                        <label for="Apellidos">
+                            <h3 class="data">Apellidos:</h3>
+                            <p class="info" id="info_apellido_all">Documento</p>
+                        </label>
+                    </div>
+                    <div class="foto">
+                        <img src="./img/usuario.png" alt="" id="usuario2_all">
+                    </div>
+                </div>
+                <hr>
+                <div class="contenido">
+                    <div class="info2">
+                        <span class="subtitulo">Información Adicional</span>
+                        <label for="Fecha de nacimiento">
+                            <h3 class="data">Fecha de nacimiento:</h3>
+                            <p class="info" id="info_fecha_all">Documento</p>
+
+                        </label>
+                        <label for="Genero:">
+                            <h3 class="data">Genero:</h3>
+                            <p class="info" id="info_genero_all">Documento</p>
+                        </label>
+                        <label for="Correo">
+                            <h3 class="data">Correo Electronico:</h3>
+                            <p class="info" id="info_mail_all">Documento</p>
+                        </label>
+                        <label for="Celular">
+                            <h3 class="data">Celular:</h3>
+                            <p class="info" id="info_tel_all">Documento</p>
+                        </label>
+                    </div>
+                </div>
+                <button class="btn" id="cerrar">Cerrar</button>
             </div>
 
         </div>
-        <script src="./scripts/consultas.js"></script>
+    </div>
+
+    <script src="./scripts/consultas.js"></script>
 </body>
 
 </html>

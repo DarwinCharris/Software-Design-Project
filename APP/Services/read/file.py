@@ -26,7 +26,12 @@ def find(id):
             data['status'] = "true"
             return(jsonify(data))
     return(jsonify(res))
-        
+
+@app.route('/findall/')
+def findall():
+    url  = "https://fa-rd-lfaria.azurewebsites.net/api/getperson"    
+    response = requests.get(url)
+    return (response.content)   
         
 if __name__ == "__main__":
     app.run(host='0.0.0.0', debug=True, port=3003)
