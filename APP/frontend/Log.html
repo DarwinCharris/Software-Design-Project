@@ -1,11 +1,103 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style7.css">
+    <title>Consultas log</title>
 </head>
+
 <body>
-    
+    <header class="header">
+        <div class="logo">
+            <a href="./index.html">
+                <img src="./img/ligero.png" alt="logo">
+            </a>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li class="now"><a href="./Agregar.html">Agregar </a></li>
+                <li><a href="./Modificar.html">Modificar </a></li>
+                <li><a href="./Consultas.html">Consultas</a></li>
+                <li><a href="./Eliminar.html">Eliminar </a></li>
+                <li><a href="./Log.html">Log</a></li>
+                <li><a href="./Configuraciones.html">Config</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="contenido">
+            <h1 class="title">Consultas Log</h1>
+            <div class="filtro">
+                <h1 class="subtitulo">Selecciona el tipo de consulta</h1>
+                <label>
+                    <input type="checkbox" name="option" value="option1" onclick="selectOnlyThis(this)"> Tipo de
+                    documento
+                </label>
+
+                <label>
+                    <input type="checkbox" name="option" value="option2" onclick="selectOnlyThis(this)"> Documento
+                </label>
+
+                <label>
+                    <input type="checkbox" name="option" value="option3" onclick="selectOnlyThis(this)"> Fecha de
+                    transacción
+                </label>
+            </div>
+
+            <div id="content1" class="hidden">
+                <form action="" id="tipo">
+                    <label for="tipo">Tipo de documento:
+                        <select name="tipo" id="typeid">
+                            <option value="1">CC</option>
+                            <option value="2">TI</option>
+                        </select>
+                        <button class="full-rounded" type="submit">
+                            <span> Buscar</span>
+                            <div class="border full-rounded"></div>
+                        </button>
+                    </label>
+                </form>
+                <div class="cardspace" id="cards_for_type">
+
+                </div>
+            </div>
+            <div id="content2" class="hidden">
+                <form action="" id="documento">
+                    <label for="documento">Documento:
+                        <input type="number" id="id" required>
+                        <button class="full-rounded" type="submit">
+                            <span> Buscar</span>
+                            <div class="border full-rounded"></div>
+                        </button>
+                    </label>
+                </form>
+                <div class="cardspace" id="cards_for_doc">
+                    
+                </div>
+                
+            </div>
+            <div id="content3" class="hidden">
+                <form action="" id="fecha">
+                    <label for="fecha">
+                        desde:
+                        <input type="datetime-local" id="fechai" required>
+                        hasta (opcional):
+                        <input type="datetime-local" id="fechaf">
+                        <button class="full-rounded" type="submit">
+                            <span> Buscar</span>
+                            <div class="border full-rounded"></div>
+                        </button>
+                    </label>
+                </form>
+                <div class="cardspace" id="cards_for_date">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./scripts/log.js"></script>
 </body>
+
 </html>

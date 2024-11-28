@@ -35,3 +35,9 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
+  document.getElementById('repo_app').addEventListener('click', function() {
+    window.open('https://github.com/DarwinCharris/Software-Design-Project', '_blank');
+  });
+  document.getElementById('repo_azure').addEventListener('click', function() {
+    window.open('https://github.com/LuisangelParra/CRUDToponimia-Microservices', '_blank');
+  });
