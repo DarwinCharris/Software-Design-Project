@@ -1,15 +1,5 @@
 
-import requests, re
-
-'''url = "https://fa-rd-lfaria.azurewebsites.net/api/getperson"
-
-response = requests.get(url, params={"id": "12346"})
-if response.content == b'User not found':
-    print("Todo bien")
-else:
-    print("todo mal")
-
-'''
+import re
 def validate(data):
     response={}
     #Si todas las validaciones están bien dejar en True

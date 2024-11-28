@@ -21,6 +21,7 @@ def find(id, type, action):
     elif action == "DELETE":
         data["details"] = "Person's data deleted."
     response = requests.post(url, data=data) 
+    print("se hizo la escritura para", data["details"])
 
     return response.content
 

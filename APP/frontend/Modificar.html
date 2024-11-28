@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./styles/style3.css">
     <title>Modificar Datos</title>
 </head>
+
 <body>
+    <div class="alert-overlay" id="customAlert">
+        <div class="alert-box">
+            <p id="alertMessage">¿Deseas modificar los datos de este usuario de formma permanente?</p>
+            <div class="botones">
+                <button class="alert-button" onclick="closeAlert()">Cancelar</button>
+                <button class="alert-button" id="delete">Confirmar</button>
+            </div>
+
+        </div>
+    </div>
     <header class="header">
         <div class="logo">
             <a href="./index.html">
-            <img src="./img/ligero.png" alt="logo">
-        </a>
+                <img src="./img/ligero.png" alt="logo">
+            </a>
         </div>
         <nav>
             <ul class="nav-links">
@@ -26,44 +38,48 @@
     </header>
     <div class="container">
         <h1 class="title">Modificar Datos</h1>
-        <form action="#" class="formulario">
+        <form action="#" class="formulario" id="formulario">
             <div class="contenido">
-                
+
                 <div class="info1">
                     <span class="subtitulo">Información Personal</span>
                     <label for="Tipo de documento:">
                         <h3 class="data">Tipo de documento:</h3>
-                        <select name="TipoDocumento" id="tipoDocumento" class="seleccion">
-                            <option value="CC">CC</option>
-                            <option value="TI">TI</option>
+                        <select name="TipoDocumento" id="typeid" class="seleccion">
+                            <option value="1">CC</option>
+                            <option value="2">TI</option>
                         </select>
-                    </label> 
+                    </label>
                     <label for="NDocumento">
                         <h3 class="data">Número de documento:</h3>
-                        <input class="campo" type="number">
-                    </label> 
+                        <input class="campo" type="number" id="id" required>
+                        <label class="error" id="err_doc">Error</label>
+                    </label>
                     <label for="Primer Nomnre">
                         <h3 class="data">Primer Nombre:</h3>
-                        <input class="campo" type="text">
-                    </label> 
+                        <input class="campo" type="text" id="firstname" required>
+                        <label class="error" id="err_name">Error</label>
+                    </label>
                     <label for="Segundo nombre">
                         <h3 class="data">Segundo Nombre:</h3>
-                        <input class="campo" type="text">
-                    </label> 
-                    <label for="Apellido">
-                        <h3 class="data">Primer Apellido:</h3>
-                        <input class="campo" type="text">
+                        <input class="campo" type="text" id="secondname">
+                        <label class="error" id="err_segname">Error</label>
                     </label>
-                    <label for="Segundo Apellido">
-                        <h3 class="data">Segundo Apellido:</h3>
-                        <input class="campo" type="text">
-                    </label> 
+                    <label for="Apellido">
+                        <h3 class="data">Apellidos:</h3>
+                        <input class="campo" type="text" id="lastsnames" required>
+                        <label class="error" id="err_apellido">Error</label>
+                    </label>
                 </div>
                 <div class="foto">
-                    <img src="./img/usuario.png" alt="">
-                    <label for="imagen">
-                        <input type="file" id="imagen" name="imagen" accept="image/*">
-                    </label>
+                    <label class="error" id="err_foto">Error</label>
+                    <img src="./img/usuario.png" alt="" id="usuario">
+                    <div class="subir">
+                        <label for="imagen" class="btn_img">
+                            <input type="file" id="imagen" name="imagen" accept="image/*">
+                            Subir Archivo
+                        </label>
+                    </div>
                 </div>
             </div>
             <hr>
@@ -73,34 +89,39 @@
                     <span class="subtitulo">Información Adicional</span>
                     <label for="Fecha de nacimiento">
                         <h3 class="data">Fecha de nacimiento:</h3>
-                        <input class="campo" type="date">
-                    </label> 
+                        <input class="campo" type="date" id="birthdate">
+                    </label>
                     <label for="Genero:">
                         <h3 class="data">Genero:</h3>
-                        <select name="Genero" id="Genero" class="seleccion">
-                            <option value="M">M</option>
-                            <option value="F">F</option>
-                            <option value="Otro">Otro</option>
+                        <select name="Genero" id="gender" class="seleccion" >
+                            <option value="M">Masculino</option>
+                            <option value="F">Femenino</option>
+                            <option value="NB">No binario</option>
+                            <option value="Na">Prefiero no decirlo</option>
                         </select>
-                    </label> 
+                    </label>
                     <label for="Correo">
-                        <h3 class="data">Correo Electronico:</h3>
-                        <input class="campo" type="email">
-                    </label> 
+                        <h3 class="data">Correo Eléctronico:</h3>
+                        <input class="campo" type="email" id="email" required>
+                        <label class="error" id="err_mail">Error</label>
+                    </label>
                     <label for="Celular">
-                        <h3 class="data">Celular:</h3>
-                        <input class="campo" type="number">
-                    </label> 
-                    <button>
+                        <h3 class="data">Teléfono:</h3>
+                        <input class="campo" type="number" id="phone" required>
+                        <label class="error" id="err_tel">Error</label>
+                    </label>
+                    <button type="submit">
                         Actualizar
                         <div class="arrow-wrapper">
                             <div class="arrow"></div>
-                    
+
                         </div>
                     </button>
                 </div>
             </div>
         </form>
     </div>
+    <script src="./scripts/modificar.js"></script>
 </body>
+
 </html>

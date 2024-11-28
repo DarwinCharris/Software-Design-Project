@@ -1,8 +1,8 @@
 document.getElementById("parte2").style.display = "none";
 document.getElementById("error").style.display = 'none';
 document.getElementById("notf").style.display = 'none';
-const doc = ""; 
-const type = "";
+var doc = ""; 
+var type = "";
 document.getElementById('formulario').addEventListener('submit', function (event) {
   event.preventDefault();
   const id = document.getElementById('id').value;
@@ -129,6 +129,7 @@ function addlog(doc, type, action){
       return response.json();
     })
     .then(data => {
+      console.log(data)
     })
     .catch(error => {
       console.error('Error:', error);
