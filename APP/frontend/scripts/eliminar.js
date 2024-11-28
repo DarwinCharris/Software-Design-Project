@@ -107,7 +107,7 @@ document.getElementById("delete").onclick = function (){
       //Hacer el log
       addlog(doc, type, "DELETE")
 
-      window.location.reload();
+      
     })
     .catch(error => {
       console.error('Error:', error);
@@ -115,24 +115,23 @@ document.getElementById("delete").onclick = function (){
     });
 };
 
-function addlog(doc, type, action){
+function addlog(doc, type, action) {
   fetch(`http://127.0.0.1:3007/write/${doc}/${type}/${action}/`, {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error(`Error ${response.status}: ${response.statusText}`);
+      method: 'GET',
+      headers: {
+          'Content-Type': 'application/json'
       }
-      return response.json();
-    })
-    .then(data => {
-      console.log(data)
-    })
-    .catch(error => {
-      console.error('Error:', error);
-      alert('Error al realizar la solicitud en log');
-    });
+  })
+      .then(response => {
+          if (!response.ok) {
+              throw new Error(`Error ${response.status}: ${response.statusText}`);
+          } else {
+              console.log("Enviado al log")
+              window.location.reload();
+          }
+      })
+      .catch(error => {
+          console.error('Error:', error);
+          alert('Error al realizar la solicitud en log');
+      });
 }

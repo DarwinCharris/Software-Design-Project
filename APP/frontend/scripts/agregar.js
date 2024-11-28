@@ -240,7 +240,7 @@ function addlog(doc, type, action) {
             if (!response.ok) {
                 throw new Error(`Error ${response.status}: ${response.statusText}`);
             } else {
-                alert("Enviado al log")
+                console.log("Enviado al log")
                 window.location.reload();
             }
         })
